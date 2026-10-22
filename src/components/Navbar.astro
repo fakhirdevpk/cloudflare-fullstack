@@ -1,0 +1,23 @@
+---
+import { mapJsonURL } from "../utils/util";
+import { dataUrls } from "../constants/constants";
+const processedLinks = mapJsonURL(dataUrls);
+---
+
+<section class="section-header">
+  <header>
+    <nav>
+      <ul>
+        <div>
+          {
+            processedLinks.map((link) => (
+              <li>
+                <a href={link.url}>{link.name}</a>
+              </li>
+            ))
+          }
+        </div>
+      </ul>
+    </nav>
+  </header>
+</section>

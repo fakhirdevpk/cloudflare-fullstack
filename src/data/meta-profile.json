@@ -1,0 +1,23 @@
+{
+  "data-profile": {
+    "name": "Aizawa",
+    "phone": {
+      "PK": {
+        "phone": "####-########",
+        "country": "pakistan",
+        "type": "personal",
+        "format": "+92"
+      },
+      "US": {
+        "phone": "####-########",
+        "country": "pakistan",
+        "type": "professional",
+        "format": "+5"
+      }
+    },
+    "email": "",
+    "country": "",
+    "location": "",
+    "zip": ""
+  }
+}

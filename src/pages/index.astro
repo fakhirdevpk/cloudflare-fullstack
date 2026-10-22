@@ -1,16 +1,17 @@
 ---
+import Baselayout from "../layouts/baselayout.astro";
+import { business } from "../config/business.json";
+import { dataUrls } from "../constants/constants";
+const title = dataUrls.home.name;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Baselayout>
+  <section>
+    <h1>{title}</h1>
+    <p>{business.name}</p>
+    <div>
+      <input id="classful" class="field" placeholder="name" type="text" />
+      <button id="prototype">post</button>
+    </div>
+  </section>
+</Baselayout>

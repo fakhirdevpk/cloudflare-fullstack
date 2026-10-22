@@ -1,0 +1,16 @@
+{
+    "persons": {
+        "reiko": {
+            "name": "reiko takashi",
+            "job": "media enthusiast",
+            "msg": "",
+            "stars": 5
+        },
+        "kango": {
+            "name": "kango yagami",
+            "job": "project manager",
+            "msg": "",
+            "stars": 5
+        }
+    }
+}

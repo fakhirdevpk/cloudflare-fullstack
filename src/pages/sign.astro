@@ -1,0 +1,19 @@
+---
+import Auth from "../layouts/auth.astro";
+import {
+  titleHome,
+  titleSignIn,
+  titleLogin,
+  linkHome,
+  linkLogin,
+  linkSignIn
+} from "../constants/constants";
+const title = titleSignIn;
+---
+
+<Auth>
+  <p>
+    go back to <a href={linkHome}>{titleHome}</a>
+    <a href={linkLogin}>don't want to {titleSignIn} go {titleLogin}</a>
+  </p>
+</Auth>

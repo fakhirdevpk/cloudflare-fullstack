@@ -1,0 +1,39 @@
+{
+    "socials": {
+        "facebook": {
+            "name": "facebook",
+            "url": "",
+            "isEnabled": false
+        },
+        "google": {
+            "name": "google",
+            "url": "facebook",
+            "isEnabled": false
+        },
+        "instagram": {
+            "name": "instagram",
+            "url": "",
+            "isEnabled": false
+        },
+        "bluesky": {
+            "name": "bluesky",
+            "url": "",
+            "isEnabled": false
+        },
+        "twitter": {
+            "name": "twitter",
+            "url": "",
+            "isEnabled": false
+        },
+        "reddit": {
+            "name": "reddit",
+            "url": "",
+            "isEnabled": false
+        },
+        "whatsapp": {
+            "name": "reddit",
+            "url": "",
+            "isEnabled": false
+        }
+    }
+}
