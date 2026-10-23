@@ -2,6 +2,7 @@
 import Baselayout from "../layouts/baselayout.astro";
 import { business } from "../config/business.json";
 import { dataUrls } from "../constants/constants";
+import button from "../components/button.svelte";
 const title = dataUrls.home.name;
 ---
 
@@ -11,7 +12,7 @@ const title = dataUrls.home.name;
     <p>{business.name}</p>
     <div>
       <input id="classful" class="field" placeholder="name" type="text" />
-      <button id="prototype">post</button>
+      button
     </div>
   </section>
 </Baselayout>

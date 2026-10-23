@@ -1,6 +1,10 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
+
+import svelte from "@astrojs/svelte";
+
+
 // https://astro.build/config
 export default defineConfig({
   server: {
@@ -8,4 +12,6 @@ export default defineConfig({
     host: true,
     allowedHosts: true, // 👈 This allows any tunnel domain to pass through securely
   },
+
+  integrations: [svelte()],
 });
