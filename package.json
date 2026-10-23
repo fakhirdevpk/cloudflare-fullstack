@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "tunnel": "ngrok http 4321 --url https://turkey-grader-ahead.ngrok-free.dev"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.4.1",
