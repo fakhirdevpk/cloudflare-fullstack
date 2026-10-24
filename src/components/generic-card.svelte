@@ -1,16 +1,15 @@
 <script lang="ts">
+  //   interface CardBody {
+  //     image: ImageBitmap;
+  //     contentObject: object;
+  //   }
   interface CardHeader {
     title: string;
     description: string;
     url: string;
   }
-  //   interface CardBody {
-  //     image: ImageBitmap;
-  //     contentObject: object;
-  //   }
-
+  
   let labelVisit: string = "visit";
-
   export function createHeader(
     title: string,
     description: string,

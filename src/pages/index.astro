@@ -2,6 +2,7 @@
 import Baselayout from "../layouts/baselayout.astro";
 import { business } from "../config/business.json";
 import { dataUrls } from "../constants/constants";
+import CompanyForm from "../components/form.svelte";
 
 const title = dataUrls.home.name;
 ---
@@ -10,5 +11,6 @@ const title = dataUrls.home.name;
   <section>
     <h1>{title}</h1>
     <p>{business.name}</p>
+    <CompanyForm />
   </section>
 </Baselayout>

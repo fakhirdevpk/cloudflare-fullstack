@@ -1,40 +1,46 @@
 @use "partials/_default.sass" as *
 @use "partials/_mixin.sass" as *
 
-*
-  @include defaultAll
-  @include center
-  margin: .2rem
-  border-radius: .5rem
-
-input
-  border: 1px solid #4c4c4c
-  border-radius: .2rem
-  width: 50%
-
-body
-  @include body
-  @include flex-column
-  font-family: "Poppins","poppins", Verdana, sans-serif,Tahoma
-  font-size: 1rem
-  overflow-x: hidden
-
-button
-  @include flex-column
-  height: 3rem
-  width: 6rem
-  padding: .5rem 1rem
-  text-transform: uppercase
-
 .page
   @include flex-column
-  @include auto
-  width: 95%
-  border: 2px solid #4d4d4d
+  width: 90%
 
-.page-header
-.page-navbar
-.page-article
-
-.page-body
+.page-header,
+.page-navbar,
+.page-article,
+.page-body,
 .page-footer
+  padding: 0
+
+.page-auth
+  @include flex-column
+  width: 100dvw
+
+.page-auth-module
+  label
+    @include block-column
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 1rem
+  input,
+  textarea
+    @include block-column
+    border: 1px solid #acacac
+    border-radius: .2rem
+    padding: .5rem 1rem
+    height: 2.25rem
+    width: 30dvw
+
+textarea
+  resize: vertical
+  min-height: 5rem
+
+.page-auth-form-send
+  @include block-column
+  background-color: #b7b7b7
+  color: white
+  width: fit-content
+  padding: 1rem 2rem
+  font-weight: 600
+  text-align: center
+  justify-content: center

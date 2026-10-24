@@ -1,14 +1,13 @@
 ---
 let todayDate = new Date();
 let currentYear = todayDate.getFullYear();
+import {business} from "../config/business.json"
 ---
 
-<section class="section-footer">
+<section class="page-footer">
   <footer>
     <div>
-      <p>Year is{currentYear}</p>
-      <p>@</p>
-      <p>ltd</p>
+      <p>{business.name} ~ {currentYear}@ltd</p>
     </div>
   </footer>
 </section>

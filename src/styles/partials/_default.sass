@@ -1,12 +1,27 @@
-input
-  margin: .15rem
-  padding: .5rem 1rem
+@use "./_mixin.sass" as *
+
+*
+  border: 0
+  margin: 0
+  padding: 0
+  @include defaultAll
+
+body
+  @include body
+  @include flex-column
+  font-family: "Poppins","poppins", Verdana, sans-serif,Tahoma
+  font-size: 1rem
+  overflow-x: hidden
+  box-sizing: border-box
 
 h1,h2,h3,h4,h5,h6,p,a,li
   text-decoration: none
   list-style: none
   text-transform: capitalize
 
-nav,ul
-  margin: 0
-  padding: 0
+textarea
+  overflow-x: hidden
+  display: flex
+
+button
+  user-select: none

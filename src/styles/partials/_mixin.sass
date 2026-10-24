@@ -6,6 +6,7 @@
   width: 100%
   border-style: none
   margin-left: 0
+  margin-top: .2rem
 
 @mixin body
   display: flex
@@ -16,7 +17,7 @@
   margin-left: auto
   margin-right: auto
 
-@mixin display($display:flex, $dir: column )
+@mixin display($display:flex, $dir: column)
   display: $display
   flex-direction: $dir
   align-content: center
@@ -39,18 +40,6 @@
 
 @mixin block-row
   @include display(block, column)
-
-@mixin start
-  justify-content: flex-start
-
-@mixin center
-  justify-content: center
-
-@mixin right
-  justify-content: flex-end
-
-@mixin move-baseline
-  justify-content: baseline
 
 @mixin erase
   display: none
