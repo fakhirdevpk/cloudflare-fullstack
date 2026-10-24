@@ -1,37 +1,20 @@
 <script lang="ts">
-  interface setCounterInterface {
-    initValue: number;
-    byAmount: number;
-    maxValue: number;
+  // Props
+  interface Props {
+    start?: number;
+    step?: number;
+    max?: number;
+    text?: string;
   }
 
-  interface setCounterUI {
-    labelButton: string;
-    counterFunction: calculateCounter;
-  }
+  let { start = 0, step = 1, max = 10, text = "+1" }: Props = $props();
 
-  type calculateCounter = (
-    initValue: number,
-    byAmount: number,
-    maxValue: number,
-  ) => number;
-
-  function count(
-    initValue: number,
-    byAmount: number,
-    maxValue: number,
-  ): setCounterInterface {
-    return { initValue, byAmount, maxValue };
-  }
-
-  function counterButtonProps(
-    labelButton: string,
-    counterFunction: calculateCounter,
-  ): setCounterUI {
-    return { labelButton, counterFunction };
-  }
-
-  const props = counterButtonProps("+1", (value, byAmount, maxValue) =>
-    Math.min(value + byAmount, maxValue),
-  );
+  // State
+  // svelte-ignore state_referenced_locally
+  let count = $state(start);
 </script>
+
+<button onclick={() => (count = Math.min(count + step, max))}>
+  {text}
+</button>
+<p>{count}</p>

@@ -8,7 +8,7 @@
     description: string;
     url: string;
   }
-  
+
   let labelVisit: string = "visit";
   export function createHeader(
     title: string,
