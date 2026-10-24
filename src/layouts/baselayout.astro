@@ -11,8 +11,12 @@ import "../styles/style.sass";
     <Header title={title} />
   </head>
   <body>
+    <div class="container-header">
+      <section class="section-hero">
+        <Navbar />
+      </section>
+    </div>
     <div class="container-baseline">
-      <Navbar />
       <section class="section-body">
         <slot />
       </section>
