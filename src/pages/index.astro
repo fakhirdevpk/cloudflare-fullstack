@@ -2,17 +2,19 @@
 import Baselayout from "../layouts/baselayout.astro";
 import { business } from "../config/business.json";
 import { dataUrls } from "../constants/constants";
-import button from "../components/button.svelte";
+import Button from "../components/button.svelte";
+import Input from "../components/input.svelte";
 const title = dataUrls.home.name;
+
+const number = 0;
 ---
 
 <Baselayout>
   <section>
     <h1>{title}</h1>
     <p>{business.name}</p>
-    <div>
-      <input id="classful" class="field" placeholder="name" type="text" />
-      button
-    </div>
+    <Button client:visible />
+    <hr>
+    <Input></Input>
   </section>
 </Baselayout>
