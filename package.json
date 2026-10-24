@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "tunnel": "ngrok http 4321 --url https://turkey-grader-ahead.ngrok-free.dev"
+    "tunnel": "ngrok http 4321 --url https://turkey-grader-ahead.ngrok-free.dev",
+    "typecheck": "bun check"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.4.1",
@@ -29,5 +30,12 @@
     "svelte": "^5.57.2",
     "typescript": "^6.0.3",
     "zod": "^4.6.7"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
   }
 }
