@@ -7,28 +7,34 @@ const OUTPUT = "src/styles/partials/_theme.sass";
 // camelCase -> kebab-case
 const kebab = (s) => s.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
 
-// Flatten nested objects: { brand: { primary: "#fff" } } -> brand-primary
+// Flatten nested objects: { space: { 4: "1rem" } } -> space-4
 function flatten(obj, prefix = "") {
   return Object.entries(obj).flatMap(([key, value]) => {
     const name = prefix ? `${prefix}-${kebab(key)}` : kebab(key);
-    return typeof value === "object" && value !== null
+    return value !== null && typeof value === "object"
       ? flatten(value, name)
       : [[name, value]];
   });
 }
 
-const theme = JSON.parse(readFileSync(INPUT, "utf8"));
-const lines = flatten(theme).map(([name, value]) => `$${name}: ${value}`);
+const pairs = flatten(JSON.parse(readFileSync(INPUT, "utf8")));
+
+// Stop if two keys produce the same variable name
+const seen = new Set();
+for (const [name] of pairs) {
+  if (seen.has(name)) throw new Error(`tokens: duplicate variable $${name}`);
+  seen.add(name);
+}
 
 const output = [
   "// Generated from src/themes/theme.json. Do not edit by hand.",
   "// Run: bun run tokens (or npm run tokens)",
   "",
-  ...lines,
+  ...pairs.map(([name, value]) => `$${name}: ${value}`),
   "",
 ].join("\n");
 
 mkdirSync(dirname(OUTPUT), { recursive: true });
 writeFileSync(OUTPUT, output);
 
-console.log(`tokens: wrote ${lines.length} variables to ${OUTPUT}`);
+console.log(`tokens: wrote ${pairs.length} variables to ${OUTPUT}`);
