@@ -30,9 +30,9 @@
       <div class="card-body-counter">
         <div class="card-body-counter-left-panel">
           <div>
-            <button aria-label="visit this product" onclick={() => {}}>
+            <!-- <button aria-label="visit this product" onclick={() => {}}>
               +1
-            </button>
+            </button> -->
           </div>
         </div>
         <div class="card-body-counter-panel"></div>

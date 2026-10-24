@@ -2,8 +2,6 @@
 import Baselayout from "../layouts/baselayout.astro";
 import { business } from "../config/business.json";
 import { dataUrls } from "../constants/constants";
-import Input from "../components/input.svelte";
-import GenericCard from "../components/generic-card.svelte";
 
 const title = dataUrls.home.name;
 ---
@@ -12,12 +10,5 @@ const title = dataUrls.home.name;
   <section>
     <h1>{title}</h1>
     <p>{business.name}</p>
-    <Input />
-    <GenericCard
-      title="name"
-      description="lots of descriptions"
-      url="/home"
-      client:visible
-    />
   </section>
 </Baselayout>

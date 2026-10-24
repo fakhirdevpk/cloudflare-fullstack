@@ -1,34 +1,40 @@
-@use "mixins/_default.sass" as *
+@use "partials/_default.sass" as *
+@use "partials/_mixin.sass" as *
 
-// Mixin
-// ____________________________________________________________ 
-
-body
-  @include bodyDefault
-  padding-left: 4rem
-
-button
-  margin: .15rem
-  padding: .5rem 1rem
-  background-color: #242424
+*
+  @include defaultAll
+  @include center
+  margin: .2rem
+  border-radius: .5rem
 
 input
-  margin: .15rem
+  border: 1px solid #4c4c4c
+  border-radius: .2rem
+  width: 50%
+
+body
+  @include body
+  @include flex-column
+  font-family: "Poppins","poppins", Verdana, sans-serif,Tahoma
+  font-size: 1rem
+  overflow-x: hidden
+
+button
+  @include flex-column
+  height: 3rem
+  width: 6rem
   padding: .5rem 1rem
+  text-transform: uppercase
 
-h1,h2,h3,h4,h5,h6,p,a,li
-  text-decoration: none
-  list-style: none
-  text-transform: capitalize
+.page
+  @include flex-column
+  @include auto
+  width: 95%
+  border: 2px solid #4d4d4d
 
-h1,h2,h3,h4,h5,h6
-  margin-left: auto
+.page-header
+.page-navbar
+.page-article
 
-nav,ul
-  margin: 0
-  padding: 0
-
-h2,h3,h4,h5,h6
-  font-weight: 400
-h1
-  font-weight: 500
+.page-body
+.page-footer

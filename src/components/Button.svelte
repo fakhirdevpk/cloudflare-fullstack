@@ -18,6 +18,3 @@
 >
   {title} clicks: {count}
 </button>
-{tens}
-{hundreds}
-{thousands}
