@@ -1,27 +1,34 @@
+@use "mixins/_default.sass" as *
+
 // Mixin
 // ____________________________________________________________ 
-@mixin bodyDefault
-  display: flex
-  flex-direction: column
-  font-family: "Poppins", Verdana, sans-serif
-  width: 100%
-  font-size: 1rem
-  margin: 0
-  padding: 0
-
-@mixin base_section
-  display: flex
-  justify-content: left
-  align-content: center
-  flex-direction: column
-  flex-flow: column
-  height: fit-content
-  width: fit-content
 
 body
   @include bodyDefault
-  @include base_section
-  margin: auto
-  padding: 1rem
-  justify-content: center
-  align-items: center
+  padding-left: 4rem
+
+button
+  margin: .15rem
+  padding: .5rem 1rem
+  background-color: #242424
+
+input
+  margin: .15rem
+  padding: .5rem 1rem
+
+h1,h2,h3,h4,h5,h6,p,a,li
+  text-decoration: none
+  list-style: none
+  text-transform: capitalize
+
+h1,h2,h3,h4,h5,h6
+  margin-left: auto
+
+nav,ul
+  margin: 0
+  padding: 0
+
+h2,h3,h4,h5,h6
+  font-weight: 400
+h1
+  font-weight: 500
