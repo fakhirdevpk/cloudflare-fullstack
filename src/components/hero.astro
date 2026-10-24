@@ -1,0 +1,36 @@
+---
+import { business } from "../data/business.json";
+---
+
+<div class="page-hero">
+  <div class="page-hero-top">
+    <!-- to be added -->
+  </div>
+  <div class="page-hero-middle">
+    <div class="hero-middle-epic">
+      <h1>
+        {business.company}
+      </h1>
+      <p>
+        {business.heroDescription}
+      </p>
+      <div class="hero-middle-epic-option-a">
+        <a href={business.aOptionURL}>
+          <p>
+            {business.aOptionName}
+          </p>
+        </a>
+      </div>
+      <div class="hero-middle-epic-option-b">
+        <a href={business.aOptionURL}>
+          <p>
+            {business.aOptionName}
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="page-hero-footer">
+    <!-- to be added -->
+  </div>
+</div>

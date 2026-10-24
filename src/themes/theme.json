@@ -1,0 +1,197 @@
+{
+  "colors": {
+    "primary": "#3498db",
+    "primaryHover": "#2980b9",
+    "primaryActive": "#21618c",
+    "primaryContrast": "#ffffff",
+    "secondary": "#2ecc71",
+    "secondaryHover": "#27ae60",
+    "secondaryActive": "#1e8449",
+    "secondaryContrast": "#ffffff",
+    "danger": "#e74c3c",
+    "dangerHover": "#c0392b",
+    "dangerActive": "#922b21",
+    "dangerContrast": "#ffffff",
+    "success": "#27ae60",
+    "warning": "#f39c12",
+    "info": "#2980b9",
+    "background": "#ffffff",
+    "backgroundMuted": "#f5f5f5",
+    "surface": "#151515",
+    "surfaceHover": "#242424",
+    "textPrimary": "#151515",
+    "textSecondary": "#4c4c4c",
+    "textMuted": "#686868",
+    "textInverse": "#ffffff",
+    "border": "#acacac",
+    "borderStrong": "#686868",
+    "focusRing": "#3498db",
+    "fontFamily": "Poppins, Verdana, Tahoma, sans-serif",
+    "radiusSmall": ".2rem",
+    "radiusMedium": ".5rem",
+    "transition": "120ms"
+  },
+  "vars": {
+    "space": {
+      "0": "0",
+      "1": ".25rem",
+      "2": ".5rem",
+      "3": ".75rem",
+      "4": "1rem",
+      "5": "1.5rem",
+      "6": "2rem",
+      "7": "3rem",
+      "8": "4rem",
+      "9": "6rem",
+      "10": "8rem"
+    },
+    "radius": {
+      "none": "0",
+      "sm": ".2rem",
+      "md": ".5rem",
+      "lg": "1rem",
+      "xl": "1.5rem",
+      "full": "9999px"
+    },
+    "border": {
+      "thin": "1px",
+      "medium": "2px",
+      "thick": "4px"
+    },
+    "shadow": {
+      "sm": "0 1px 2px rgba(0, 0, 0, .08)",
+      "md": "0 4px 8px rgba(0, 0, 0, .12)",
+      "lg": "0 8px 24px rgba(0, 0, 0, .16)",
+      "xl": "0 16px 48px rgba(0, 0, 0, .2)"
+    },
+    "duration": {
+      "fast": "80ms",
+      "base": "120ms",
+      "slow": "240ms",
+      "slower": "400ms"
+    },
+    "ease": {
+      "standard": "ease",
+      "in": "ease-in",
+      "out": "ease-out",
+      "inOut": "ease-in-out"
+    },
+    "z": {
+      "base": "0",
+      "raised": "10",
+      "dropdown": "100",
+      "sticky": "200",
+      "overlay": "300",
+      "modal": "400",
+      "toast": "500"
+    },
+    "bp": {
+      "sm": "480px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "container": {
+      "sm": "40rem",
+      "md": "48rem",
+      "lg": "64rem",
+      "xl": "80rem",
+      "full": "100%"
+    },
+    "size": {
+      "input": "2.25rem",
+      "button": "3rem",
+      "nav": "3rem",
+      "iconSm": "1rem",
+      "iconMd": "1.5rem",
+      "iconLg": "2rem"
+    },
+    "opacity": {
+      "disabled": ".5",
+      "hover": ".8",
+      "overlay": ".6"
+    }
+  },
+  "typography": {
+    "type": {
+      "font": {
+        "body": "Poppins, Verdana, Tahoma, sans-serif",
+        "heading": "Poppins, Verdana, Tahoma, sans-serif",
+        "mono": "Consolas, Menlo, monospace"
+      },
+      "size": {
+        "xs": ".6rem",
+        "sm": ".8rem",
+        "base": "1rem",
+        "md": "1.125rem",
+        "lg": "1.25rem",
+        "xl": "1.5rem",
+        "xxl": "2rem",
+        "display": "3rem"
+      },
+      "weight": {
+        "light": "300",
+        "regular": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700",
+        "black": "900"
+      },
+      "leading": {
+        "tight": "1.15",
+        "snug": "1.3",
+        "normal": "1.5",
+        "relaxed": "1.75"
+      },
+      "tracking": {
+        "tight": "-.02em",
+        "normal": "0",
+        "wide": ".05em",
+        "wider": ".1em"
+      },
+      "heading": {
+        "h1": {
+          "size": "2.5rem",
+          "weight": "700",
+          "leading": "1.15"
+        },
+        "h2": {
+          "size": "2rem",
+          "weight": "700",
+          "leading": "1.2"
+        },
+        "h3": {
+          "size": "1.5rem",
+          "weight": "600",
+          "leading": "1.3"
+        },
+        "h4": {
+          "size": "1.25rem",
+          "weight": "600",
+          "leading": "1.3"
+        },
+        "h5": {
+          "size": "1.125rem",
+          "weight": "600",
+          "leading": "1.4"
+        },
+        "h6": {
+          "size": "1rem",
+          "weight": "600",
+          "leading": "1.4"
+        }
+      },
+      "label": {
+        "size": ".6rem",
+        "weight": "700",
+        "tracking": ".05em"
+      },
+      "button": {
+        "size": ".8rem",
+        "weight": "600",
+        "tracking": ".05em"
+      }
+    }
+  }
+}

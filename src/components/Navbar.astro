@@ -4,17 +4,19 @@ import { dataUrls } from "../constants/constants";
 const processedLinks = mapJsonURL(dataUrls);
 ---
 
-<section class="section-header">
-  <header>
+<section class="page-navbar">
+  <header class="page-navbar-section">
     <nav>
       <ul>
-        {
-          processedLinks.map((link) => (
-            <li>
-              <a href={link.url}>{link.name}</a>
-            </li>
-          ))
-        }
+        <div>
+          {
+            processedLinks.map((link) => (
+              <li class="page-desktop-nav">
+                <a href={link.url}>{link.name}</a>
+              </li>
+            ))
+          }
+        </div>
       </ul>
     </nav>
   </header>

@@ -1,11 +1,10 @@
 ---
 import Baselayout from "../layouts/baselayout.astro";
-import { business } from "../data/business.json";
-import { dataUrls } from "../constants/constants";
-const title = dataUrls.home.name;
+import Hero from "../components/hero.astro";
 ---
 
 <Baselayout>
   <section>
+    <Hero />
   </section>
 </Baselayout>

@@ -1,9 +1,9 @@
-@use "partials/_default.sass" as *
-@use "partials/_mixin.sass" as *
+@use "./partials/_default.sass" as *
+@use "./partials/_mixin.sass" as *
+@use "./partials/_theme.sass" as *
 
 .page
-  @include flex-column
-  width: 90%
+  width: 98%
 
 .page-header,
 .page-navbar,
@@ -59,3 +59,54 @@ textarea
   display: block
   background: red
   color: white
+
+nav
+ul
+  div
+    gap: .3rem
+    @include flex-row
+    width: fit-content
+
+.page-desktop-nav
+  height: fit-content
+  a
+    font-size: .75rem
+    font-weight: 700
+    padding: 1.25rem
+    width: 6rem
+    @include block-column
+    color: white
+    border-radius: .25rem
+    text-align: center
+    background-color: #151515
+    transition: 160ms
+  a:hover
+    background-color: #242424
+    transition: 160ms
+
+.page-desktop-nav:nth-child(4)
+  a
+    margin-left: 53rem
+    background-color: #a4c84f
+    transition: 160ms
+    width: 4rem
+  a:hover
+    background-color: #7cde58
+    transition: 160ms
+
+.page-desktop-nav:nth-child(5)
+  a
+    background-color: #7bdc92
+    color: #fff
+    transition: 160ms
+    width: 4rem
+  a:hover
+    background-color: #43c781
+    color: white
+    transition: 160ms
+
+.page-navbar
+  background-color: #151515
+  height: fit-content
+  padding: .4rem
+  border-radius: .5rem

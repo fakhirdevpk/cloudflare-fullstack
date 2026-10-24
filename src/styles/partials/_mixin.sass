@@ -1,21 +1,286 @@
+
+
 @mixin defaultAll
-  border: 0
-  margin: 0
-  padding: 0
-  height: fit-content
-  width: 100%
+  width: fit-content
   border-style: none
-  margin-left: 0
-  margin-top: .1rem
+  margin-top: .2rem
 
 @mixin body
-  display: flex
-  flex-direction: column
-  width: 100%
   margin: 0
   padding: 0
+
+// Typography base
+@mixin type($size, $weight, $leading, $tracking: $typography-type-tracking-normal)
+  font-size: $size
+  font-weight: $weight
+  line-height: $leading
+  letter-spacing: $tracking
+
+// Headings
+@mixin h1
+  font-family: $typography-type-font-heading
+  @include type($typography-type-heading-h1-size, $typography-type-heading-h1-weight, $typography-type-heading-h1-leading)
+
+@mixin h2
+  font-family: $typography-type-font-heading
+  @include type($typography-type-heading-h2-size, $typography-type-heading-h2-weight, $typography-type-heading-h2-leading)
+
+@mixin h3
+  font-family: $typography-type-font-heading
+  @include type($typography-type-heading-h3-size, $typography-type-heading-h3-weight, $typography-type-heading-h3-leading)
+
+@mixin h4
+  font-family: $typography-type-font-heading
+  @include type($typography-type-heading-h4-size, $typography-type-heading-h4-weight, $typography-type-heading-h4-leading)
+
+@mixin h5
+  font-family: $typography-type-font-heading
+  @include type($typography-type-heading-h5-size, $typography-type-heading-h5-weight, $typography-type-heading-h5-leading)
+
+@mixin h6
+  font-family: $typography-type-font-heading
+  @include type($typography-type-heading-h6-size, $typography-type-heading-h6-weight, $typography-type-heading-h6-leading)
+
+@mixin display-text
+  font-family: $typography-type-font-heading
+  @include type($typography-type-size-display, $typography-type-weight-black, $typography-type-leading-tight, $typography-type-tracking-tight)
+
+// Text styles
+@mixin body-text
+  font-family: $typography-type-font-body
+  @include type($typography-type-size-base, $typography-type-weight-regular, $typography-type-leading-normal)
+
+@mixin small-text
+  font-family: $typography-type-font-body
+  @include type($typography-type-size-sm, $typography-type-weight-regular, $typography-type-leading-normal)
+
+@mixin lead-text
+  font-family: $typography-type-font-body
+  @include type($typography-type-size-lg, $typography-type-weight-regular, $typography-type-leading-relaxed)
+
+@mixin label-text
+  font-family: $typography-type-font-body
+  text-transform: uppercase
+  @include type($typography-type-label-size, $typography-type-label-weight, $typography-type-leading-tight, $typography-type-label-tracking)
+
+@mixin button-text
+  font-family: $typography-type-font-body
+  text-transform: uppercase
+  @include type($typography-type-button-size, $typography-type-button-weight, $typography-type-leading-tight, $typography-type-button-tracking)
+
+@mixin mono-text
+  font-family: $typography-type-font-mono
+  @include type($typography-type-size-sm, $typography-type-weight-regular, $typography-type-leading-normal)
+
+@mixin muted-text
+  color: $colors-text-muted
+
+// Surfaces
+@mixin surface-light
+  background-color: $colors-background
+  color: $colors-text-primary
+
+@mixin surface-muted
+  background-color: $colors-background-muted
+  color: $colors-text-primary
+
+@mixin surface-dark
+  background-color: $colors-surface
+  color: $colors-text-inverse
+
+// Effects
+@mixin smooth($duration: $vars-duration-base)
+  transition: all $duration $vars-ease-standard
+
+@mixin elevate-sm
+  box-shadow: $vars-shadow-sm
+
+@mixin elevate-md
+  box-shadow: $vars-shadow-md
+
+@mixin elevate-lg
+  box-shadow: $vars-shadow-lg
+
+@mixin elevate-xl
+  box-shadow: $vars-shadow-xl
+
+@mixin focus-ring
+  outline: $vars-border-medium solid $colors-focus-ring
+  outline-offset: 2px
+
+@mixin disabled
+  opacity: $vars-opacity-disabled
+  cursor: not-allowed
+  pointer-events: none
+
+// Layers
+@mixin layer-dropdown
+  z-index: $vars-z-dropdown
+
+@mixin layer-sticky
+  z-index: $vars-z-sticky
+
+@mixin layer-overlay
+  z-index: $vars-z-overlay
+
+@mixin layer-modal
+  z-index: $vars-z-modal
+
+@mixin layer-toast
+  z-index: $vars-z-toast
+
+// Layout
+@mixin container($max: $vars-container-lg)
+  width: 100%
+  max-width: $max
   margin-left: auto
   margin-right: auto
+  padding-left: $vars-space-4
+  padding-right: $vars-space-4
+
+@mixin stack($gap: $vars-space-4)
+  display: flex
+  flex-direction: column
+  gap: $gap
+
+@mixin cluster($gap: $vars-space-2)
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  gap: $gap
+
+@mixin inset($space: $vars-space-4)
+  padding: $space
+
+// Responsive
+@mixin up($width)
+  @media (min-width: $width)
+    @content
+
+@mixin down($width)
+  @media (max-width: $width - 1px)
+    @content
+
+@mixin up-md
+  @media (min-width: $vars-bp-md)
+    @content
+
+@mixin up-lg
+  @media (min-width: $vars-bp-lg)
+    @content
+
+@mixin down-md
+  @media (max-width: $vars-bp-md - 1px)
+    @content
+
+// Buttons
+@mixin button-base($bg, $bg-hover, $bg-active, $fg)
+  @include button-text
+  @include smooth
+  height: $vars-size-button
+  padding: 0 $vars-space-5
+  border: 0
+  border-radius: $colors-radius-medium
+  background-color: $bg
+  color: $fg
+  cursor: pointer
+
+  &:hover
+    background-color: $bg-hover
+
+  &:active
+    background-color: $bg-active
+
+  &:focus-visible
+    @include focus-ring
+
+  &:disabled
+    @include disabled
+
+@mixin button-primary
+  @include button-base($colors-primary, $colors-primary-hover, $colors-primary-active, $colors-primary-contrast)
+
+@mixin button-secondary
+  @include button-base($colors-secondary, $colors-secondary-hover, $colors-secondary-active, $colors-secondary-contrast)
+
+@mixin button-danger
+  @include button-base($colors-danger, $colors-danger-hover, $colors-danger-active, $colors-danger-contrast)
+
+// Forms
+@mixin field
+  @include body-text
+  @include smooth
+  height: $vars-size-input
+  padding: $vars-space-2 $vars-space-4
+  border: $vars-border-thin solid $colors-border
+  border-radius: $vars-radius-sm
+  background-color: $colors-background
+  color: $colors-text-primary
+
+  &:hover
+    border-color: $colors-border-strong
+
+  &:focus
+    @include focus-ring
+
+  &:disabled
+    @include disabled
+
+@mixin field-label
+  @include label-text
+  color: $colors-text-secondary
+
+@mixin field-error
+  @include small-text
+  padding: $vars-space-2 $vars-space-3
+  border-radius: $vars-radius-sm
+  background-color: $colors-danger
+  color: $colors-danger-contrast
+
+// Alerts
+@mixin alert($bg, $fg: $colors-text-inverse)
+  @include small-text
+  padding: $vars-space-3 $vars-space-4
+  border-radius: $vars-radius-md
+  background-color: $bg
+  color: $fg
+
+@mixin alert-success
+  @include alert($colors-success)
+
+@mixin alert-warning
+  @include alert($colors-warning, $colors-text-primary)
+
+@mixin alert-info
+  @include alert($colors-info)
+
+@mixin alert-danger
+  @include alert($colors-danger, $colors-danger-contrast)
+
+// Components
+@mixin card
+  @include surface-light
+  @include elevate-md
+  padding: $vars-space-5
+  border: $vars-border-thin solid $colors-border
+  border-radius: $vars-radius-md
+
+@mixin nav-bar
+  @include surface-dark
+  height: $vars-size-nav
+  width: 100%
+
+@mixin nav-link
+  @include label-text
+  @include smooth
+  padding: $vars-space-4
+  border-radius: $vars-radius-sm
+  color: $colors-text-inverse
+  text-decoration: none
+
+  &:hover
+    background-color: $colors-surface-hover
 
 @mixin display($display:flex, $dir: column)
   display: $display
@@ -23,7 +288,6 @@
   align-content: center
   align-items: center
   align-self: center
-  width: 100%
   height: fit-content
 
 @mixin auto
@@ -40,16 +304,3 @@
 
 @mixin block-row
   @include display(block, column)
-
-@mixin erase
-  display: none
-
-@mixin text($transform, $size, $weight, $justify, $line-height)
-  @include auto
-  height: fit-content
-  width: 100%
-  font-weight: $weight
-  font-size: $size
-  text-transform: $transform
-  line-height: $line-height
-  text-justify: $justify
