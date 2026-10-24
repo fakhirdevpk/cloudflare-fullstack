@@ -1,0 +1,10 @@
+---
+import type { Props } from "../ts/types/link-chip.ts";
+const { linkName, link } = Astro.props;
+---
+
+<a href={link}>
+  <div class="link-chip">
+    <p>{linkName}</p>
+  </div>
+</a>

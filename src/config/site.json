@@ -1,0 +1,96 @@
+{
+    "components-toggle": {
+        "hero": {
+            "slug": "hero",
+            "delay": 0,
+            "order": 1,
+            "enabled": true
+        },
+        "navbar": {
+            "slug": "nav",
+            "delay": 0,
+            "order": 1,
+            "enabled": true
+        },
+        "navigation-items": {
+            "slug": "nav-items",
+            "delay": 0,
+            "order": 1,
+            "enabled": true
+        },
+        "footer": {
+            "slug": "footer",
+            "delay": 0,
+            "order": 1,
+            "enabled": true
+        },
+        "testimonies": {
+            "slug": "testimonies",
+            "delay": 0,
+            "order": 1,
+            "enabled": true
+        },
+        "newsletter": {
+            "slug": "newsletter",
+            "delay": 0,
+            "order": 1,
+            "enabled": true
+        },
+        "carousel": {
+            "slug": "carousel",
+            "delay": 0,
+            "order": 1,
+            "enabled": true
+        },
+        "faq-modules": {
+            "enabled": true
+        },
+        "contact-form": {
+            "enabled": true
+        },
+        "sign-form": {
+            "enabled": true
+        },
+        "login-form": {
+            "enabled": true
+        }
+    },
+    "server": {
+        "api": {
+            "content": {
+                "name": "",
+                "type": "",
+                "url": "",
+                "isEnabled": false
+            },
+            "ad-management": {},
+            "whatsapp": {}
+        },
+        "author": {
+            "fakhir": {
+                "name": "fakhir",
+                "type": "software developer",
+                "phone": "",
+                "portfolio": "",
+                "isEnabled": false
+            },
+            "ad-management": {},
+            "whatsapp": {}
+        }
+    },
+    "http": {
+        "200": {
+            "name": "ok",
+            "type": "positivive"
+        },
+        "404": {
+            "name": "ok",
+            "type": "positivive"
+        },
+        "405": {
+            "name": "ok",
+            "type": "positivive"
+        }
+    },
+    "b": {}
+}

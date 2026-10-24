@@ -1,0 +1,74 @@
+{
+    "data-profile": {
+        "name": "Aizawa",
+        "phone": {
+            "PK": {
+                "phone": "####-########",
+                "country": "pakistan",
+                "type": "personal",
+                "format": "+92"
+            },
+            "US": {
+                "phone": "####-########",
+                "country": "pakistan",
+                "type": "professional",
+                "format": "+5"
+            }
+        },
+        "email": "",
+        "country": "",
+        "location": "",
+        "zip": ""
+    },
+    "socials": {
+        "facebook": {
+            "name": "facebook",
+            "url": "",
+            "isEnabled": false
+        },
+        "google": {
+            "name": "google",
+            "url": "facebook",
+            "isEnabled": false
+        },
+        "instagram": {
+            "name": "instagram",
+            "url": "",
+            "isEnabled": false
+        },
+        "bluesky": {
+            "name": "bluesky",
+            "url": "",
+            "isEnabled": false
+        },
+        "twitter": {
+            "name": "twitter",
+            "url": "",
+            "isEnabled": false
+        },
+        "reddit": {
+            "name": "reddit",
+            "url": "",
+            "isEnabled": false
+        },
+        "whatsapp": {
+            "name": "reddit",
+            "url": "",
+            "isEnabled": false
+        }
+    },
+    "testmonies": {
+        "reiko": {
+            "name": "reiko takashi",
+            "job": "media enthusiast",
+            "msg": "",
+            "stars": 5
+        },
+        "kango": {
+            "name": "kango yagami",
+            "job": "project manager",
+            "msg": "",
+            "stars": 5
+        }
+    }
+}

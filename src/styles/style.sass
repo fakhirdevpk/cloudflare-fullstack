@@ -1,0 +1,61 @@
+@use "partials/_default.sass" as *
+@use "partials/_mixin.sass" as *
+
+.page
+  @include flex-column
+  width: 90%
+
+.page-header,
+.page-navbar,
+.page-article,
+.page-body,
+.page-footer
+  padding: 0
+
+.page-auth
+  @include flex-column
+  width: 100dvw
+
+.page-auth-module
+  label
+    @include block-column
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 1rem
+  input
+    @include block-column
+    border: 1px solid #acacac
+    border-radius: .2rem
+    padding: .5rem 1rem
+    height: 2.25rem
+    width: 30dvw
+
+button
+  @include block-column
+  border: 1px solid #acacac
+  border-radius: .2rem
+  height: 3rem
+  width: 4rem
+
+textarea
+  @include block-column
+  border: 1px solid #acacac
+  border-radius: .2rem
+  padding: .5rem 1rem
+  height: 2.25rem
+  width: 30dvw
+
+.page-auth-form-send
+  @include block-column
+  background-color: #b7b7b7
+  color: white
+  width: fit-content
+  padding: 1rem 2rem
+  font-weight: 600
+  text-align: center
+  justify-content: center
+
+.page-auth-error-display
+  display: block
+  background: red
+  color: white

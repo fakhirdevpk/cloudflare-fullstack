@@ -1,0 +1,33 @@
+{
+    "labels": {
+        "default": {
+            "list-links": {
+                "home": {
+                    "name": "Home",
+                    "url": "/",
+                    "status": true
+                },
+                "about": {
+                    "name": "About",
+                    "url": "/about",
+                    "status": true
+                },
+                "contact": {
+                    "name": "Contact us",
+                    "url": "/contact",
+                    "status": true
+                },
+                "sign": {
+                    "name": "sign in",
+                    "url": "/sign",
+                    "status": true
+                },
+                "login": {
+                    "name": "log in",
+                    "url": "/login",
+                    "status": true
+                }
+            }
+        }
+    }
+}

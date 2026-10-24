@@ -1,0 +1,55 @@
+@mixin defaultAll
+  border: 0
+  margin: 0
+  padding: 0
+  height: fit-content
+  width: 100%
+  border-style: none
+  margin-left: 0
+  margin-top: .1rem
+
+@mixin body
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin: 0
+  padding: 0
+  margin-left: auto
+  margin-right: auto
+
+@mixin display($display:flex, $dir: column)
+  display: $display
+  flex-direction: $dir
+  align-content: center
+  align-items: center
+  align-self: center
+  width: 100%
+  height: fit-content
+
+@mixin auto
+  margin-right: auto
+
+@mixin flex-column
+  @include display(flex, column)
+
+@mixin flex-row
+  @include display(flex, row)
+
+@mixin block-column
+  @include display(block, column)
+
+@mixin block-row
+  @include display(block, column)
+
+@mixin erase
+  display: none
+
+@mixin text($transform, $size, $weight, $justify, $line-height)
+  @include auto
+  height: fit-content
+  width: 100%
+  font-weight: $weight
+  font-size: $size
+  text-transform: $transform
+  line-height: $line-height
+  text-justify: $justify

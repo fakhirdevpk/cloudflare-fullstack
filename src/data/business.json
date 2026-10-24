@@ -1,0 +1,30 @@
+{
+    "business": {
+        "company": "Dolardo Enterprises",
+        "phone": "03188869599",
+        "phoneFormat": "+92",
+        "Email": "",
+        "adress": "",
+        "aAdressURL": "",
+        "aOptionName": "",
+        "aOptionURL": "",
+        "bOptionName": "",
+        "bOptionURL": "",
+        "privacy": "privacy",
+        "privacyURL": "",
+        "tos": "terms of service",
+        "tosURL": "",
+        "faq": {
+            "q1": {
+                "title": "",
+                "description": "",
+                "url": ""
+            },
+            "q2": {
+                "title": "",
+                "description": "",
+                "url": ""
+            }
+        }
+    }
+}

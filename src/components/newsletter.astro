@@ -1,0 +1,12 @@
+---
+import type { Props } from "../ts/types/newsletter.ts";
+const { buttonText = "Subscribe" } = Astro.props;
+---
+
+<form class="page-auth-module" action="/api/subscribe" method="POST">
+  <label>
+    Email
+    <input type="email" name="email" placeholder="john@gmail.com" required />
+  </label>
+  <button class="page-auth-form-send">{buttonText}</button>
+</form>

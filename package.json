@@ -1,0 +1,33 @@
+{
+  "name": "pizza",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "tunnel": "ngrok http 4321 --url https://turkey-grader-ahead.ngrok-free.dev"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.4.1",
+    "@astrojs/svelte": "^9.1.1",
+    "astro": "^7.3.8",
+    "axios": "^1.20.0",
+    "clsx": "^2.1.1",
+    "gsap": "^3.15.0",
+    "hono": "^4.13.13",
+    "hotkeys-js": "^4.0.8",
+    "nanostores": "^1.5.5",
+    "open-color": "^1.9.1",
+    "radashi": "^12.9.6",
+    "sass": "^1.105.2",
+    "sass-mq": "^7.0.1",
+    "svelte": "^5.57.2",
+    "typescript": "^6.0.3",
+    "zod": "^4.6.7"
+  }
+}

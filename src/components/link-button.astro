@@ -1,0 +1,20 @@
+---
+import type { Props } from "../ts/types/link-button.ts";
+const { linkName, linkURL, icon, external = false } = Astro.props;
+---
+
+<a
+  class="link-button"
+  href={linkURL}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+>
+  {
+    icon && (
+      <span class="link-button-logo">
+        <img src={icon} alt="" />
+      </span>
+    )
+  }
+  <span class="link-button-name">{linkName}</span>
+</a>
