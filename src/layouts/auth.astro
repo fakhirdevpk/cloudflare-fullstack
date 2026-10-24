@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro";
 const title = Astro.props;
 import "../styles/style.sass";
-
 ---
 
 <html lang="en">
@@ -10,8 +9,8 @@ import "../styles/style.sass";
     <Header title={title} />
   </head>
   <body>
-    <section class="container">
-      <section class="auth">
+    <section>
+      <section>
         <div><slot /></div>
       </section>
     </section>
