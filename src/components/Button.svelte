@@ -3,20 +3,19 @@
   let tens = $state(0);
   let hundreds = $state(0);
   let thousands = $state(0);
-
-  let title = $state("burger");
+  let title = $state("Burger");
 </script>
 
 <button
   onclick={() => {
     count++;
-    console.log("clicked");
+    console.log("Clicked");
     tens += 10;
     hundreds += 100;
     thousands += 1000;
 
     if (tens > 0 && tens < 100) {
-      title = "pineapple";
+      title = "Pineapple";
     }
     if (tens > 100) {
       title = "fruit";

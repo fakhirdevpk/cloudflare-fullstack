@@ -1,42 +1,64 @@
 <script lang="ts">
+  import { string } from "astro:schema";
+  import Button from "./button.svelte";
+
   interface Card {
     title: string;
     description: string;
     image: ImageBitmap;
+    goURL: string;
+    buttonName: string;
     contentObjectLabels: string;
     contentObject: object;
     labelComplain: string;
     labelMoreLike: string;
-    buttonName: string;
     displayerInteger: number;
     counter: number;
   }
 
   //   const image = image
   //   const contentObject
-  let title = "title";
-  let description = "duh";
   let labelComplain = "Complain?";
   let labelMoreLike = "More like this?";
-  let buttonName = "X";
   let displayerInteger = $state(0);
   let counter = $state(0);
 
   let label1s = 1;
   let label10s = 10;
   let labelReset = 0;
+
+  export function createCard(
+    title: string,
+    description: string,
+    goURL: string,
+    buttonName: string,
+  ): Card {
+    return { title, description, goURL, buttonName };
+  }
+  const cardDetails = createCard(
+    "title",
+    "duh",
+    "https://facebook.com",
+    "Visit",
+  );
 </script>
 
 <div class="card">
   <div class="card-body">
     <img src="" alt="" />
     <div class="card-body-text">
-      <p>Heading</p>
-      <p>descr</p>
+      <p>{cardDetails.title}</p>
+      <p>{cardDetails.description}</p>
       <div class="card-body-counter">
         <div class="card-body-counter-left-panel">
           <div>
-            <button></button>
+            <button
+              aria-label="visit this product"
+              onclick={() => {
+                window.location.href = cardDetails.goURL;
+              }}
+              {cardDetails.buttonName}
+            ></button>
           </div>
         </div>
         <div class="card-body-counter-panel"></div>
